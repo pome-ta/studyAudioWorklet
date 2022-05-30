@@ -10,3 +10,4 @@
 
 [[WebAudio API] AudioWorklet の使い方 | g200kg Music & Software](https://www.g200kg.com/archives/2019/01/webaudio-api-au.html)
 
+[webaudio-examples/audioworklet at master · mdn/webaudio-examples](https://github.com/mdn/webaudio-examples/tree/master/audioworklet)
