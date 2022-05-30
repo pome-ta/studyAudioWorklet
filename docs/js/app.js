@@ -16,6 +16,8 @@ let gainNode;
 let hissGainParam;
 
 async function createHissProcessor() {
+  console.log('createHissProcessor');
+  console.log(audioContext);
   if (!audioContext) {
     try {
       audioContext = new AudioContext();
@@ -31,7 +33,9 @@ async function createHissProcessor() {
     try {
       console.log('adding...');
       await audioContext.audioWorklet.addModule('./js/hiss-generator.js');
+      console.log(audioContext);
       processorNode = new AudioWorkletNode(audioContext, 'hiss-generator');
+      console.log(processorNode);
     } catch(e) {
       console.log(`** Error: Unable to create worklet node: ${e}`);
       return null;
@@ -49,6 +53,7 @@ async function audioDemoStart() {
     return;
   }
   const soundSource = new OscillatorNode(audioContext);
+  console.log(audioContext);
   gainNode = audioContext.createGain();
 
   // Configure the oscillator node
@@ -87,7 +92,7 @@ window.addEventListener('load', event => {
 async function toggleSound(event) {
   if (!audioContext) {
     audioDemoStart();
-    
+    console.log(gainNode);
     hissGainRange.disabled = false;
     oscGainRange.disabled = false;
   } else {

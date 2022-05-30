@@ -1,3 +1,7 @@
+# 📝 2022/05/30
+
+[Safari 14.1 の AudioWorklet で音が出ない話 - Qiita](https://qiita.com/okaxaki/items/c807bdfe3e96d6ef7960)
+
 # 📝 2022/05/29
 
 
